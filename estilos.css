@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+}
+
+header {
+    text-align: center;
+    padding: 1em;
+
+    align-content: center;
+}
+
+#logo {
+    font-family: "Climate Crisis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(255, 201, 101);
+    font-size: 3em;
+}
+
+header h1 {
+    font-size: 1.5em;
+    color: rgb(54, 177, 150);
+}
+
+#grid img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    height: 100%;
+}
+
+#grid {
+    display: grid;
+    gap: 0.5em;
+}
+ #grid article {
+        overflow: hidden;
+        position: relative;
+    }
+#grid h2{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color:  rgba(255, 201, 101, 0.582);
+    color: rgba(15, 15, 73, 0.623);
+
+    margin-top:  2em;
+    padding-right: 2em;
+border-radius: 10px 0  0 10px;
+    padding-left: 2em;
+    font-size: 1.5em;
+}
+#grid p{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(15, 15, 73, 0.623);
+    color: rgb(255, 201, 101);
+    padding: 2em;
+}
+
+@media all and (min-width:768px) {
+    #grid {
+        grid-template-columns: 50% 50%;
+    }
+
+    header, #art3 {
+        grid-column: span 2;
+    }
+
+   
+
+}
+
+@media all and (min-width:1200px) {
+    #grid {
+        height: 100vh;
+        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-rows: 1fr 1fr 1fr 2fr;
+    }
+    #logo{
+font-size: 3.5em;
+    }
+
+    header {
+        grid-column: span 1;
+    }
+
+    #art1 {
+        grid-row: span 2;
+    }
+
+    #art2 {
+
+        grid-row: span 2;
+    }
+
+    #art3 {
+        grid-row: span 2;
+        grid-column: span 1;
+    }
+
+    #art4 {
+        grid-column: span 2;
+        grid-row: span 2;
+
+    }
+    #grid p{
+        opacity: 0;
+        transition: 0.3s;
+    }
+    #grid article:hover p{
+        opacity: 1;
+    }
+
+}
